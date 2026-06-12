@@ -1,0 +1,12 @@
+name: Daily Weather Alert Automation
+
+on:
+  schedule:
+    # Runs everyday at 02:00 AM UTC
+    - cron: '0 2 * * *'
+  workflow_dispatch:
+
+jobs:
+  check-weather-job:
+    runs-on: ubuntu-latest
+# ... (the rest of your steps below)
