@@ -1,0 +1,33 @@
+name: Morning News Aggregator
+
+on:
+  schedule:
+    # Runs at 01:30 UTC every day (07:00 AM IST)
+    - cron: '30 1 * * *'
+  workflow_dispatch:
+
+jobs:
+  scrape-and-send:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+          
+      - name: Install Requirements
+        run: |
+          pip install requests beautifulsoup4 lxml
+
+      - name: Execute News Bot
+        env:
+          # Assuming you are adding this to your existing automation repository, 
+          # it will automatically inherit the secrets you already set up.
+          ALERT_EMAIL: ${{ secrets.ALERT_EMAIL }}
+          ALERT_EMAIL_PASSWORD: ${{ secrets.ALERT_EMAIL_PASSWORD }}
+          RECEIVER_EMAIL: ${{ secrets.RECEIVER_EMAIL }}
+        run: python news_bot.py
