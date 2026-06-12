@@ -2,11 +2,29 @@ name: Daily Weather Alert Automation
 
 on:
   schedule:
-    # Runs everyday at 02:00 AM UTC
     - cron: '0 2 * * *'
   workflow_dispatch:
 
 jobs:
   check-weather-job:
     runs-on: ubuntu-latest
-# ... (the rest of your steps below)
+
+    steps:
+      - name: Codebase Checkout
+        uses: actions/checkout@v4
+
+      - name: Initialize Environment Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+          
+      - name: Resolve Dependencies
+        run: pip install requests
+
+      - name: Execute Alert Bot Execution
+        env:
+          OWM_API_KEY: ${{ secrets.OWM_API_KEY }}
+          ALERT_EMAIL: ${{ secrets.ALERT_EMAIL }}
+          ALERT_EMAIL_PASSWORD: ${{ secrets.ALERT_EMAIL_PASSWORD }}
+          RECEIVER_EMAIL: ${{ secrets.RECEIVER_EMAIL }}
+        run: python weather.py
