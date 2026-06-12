@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of ADVAITH V ANAND — UI designer and web developer based in Kerala.">
+  <title>ADVAITH V ANAND — Developer Portfolio</title>
+
+  <!-- Google Fonts: Inter (same font as your Session 01 design) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Your stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============ NAVIGATION ============ -->
+  <nav class="nav" aria-label="Main navigation">
+    <div class="container nav-inner">
+      <span class="nav-brand">ADVAITH V ANAND</span>
+      <ul class="nav-links">
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li>
+          <button class="theme-btn" id="theme-toggle" aria-label="Toggle dark mode">&#127769;</button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <header class="hero" id="home">
+    <div class="container">
+      <p class="hero-tag reveal">Hey, I&#8217;m</p>
+      <h1 class="hero-name reveal">ADVAITH V ANAND</h1>
+      <p class="hero-role reveal">UI Designer &amp; Web Developer &#8212; <span class="highlight">B.Tech ECE, Kerala</span></p>Focused on finding solutions: architecting systems, developing the web, and automating the rest. Building and learning in public with ZERO2DEV..</p>
+      <p class="hero-bio reveal">
+      <div class="hero-ctas reveal">
+        <a href="#projects" class="btn btn-primary">See My Projects</a>
+        
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ PROJECTS ============ -->
+    <section class="section" id="projects">
+      <div class="container">
+        <p class="section-label">01 &#8212; Work</p>
+        <h2 class="section-title">Projects</h2>
+
+        <div class="projects-grid">
+
+          <!-- Project 1: Tide (your Session 01 work) -->
+          <article class="card reveal">
+            <span class="card-tag">UI / UX Design</span>
+            <h3 class="card-title">Tide</h3>
+            <p class="card-desc">A complete task-manager app design built in Figma: a token-based design system, seven connected screens, and a clickable prototype. My first end-to-end product design.</p>
+            <div class="card-meta">
+              <span class="chip">Figma</span>
+              <span class="chip">Design System</span>
+              <span class="chip">Prototype</span>
+            </div>
+            <a href="https://www.figma.com/proto/NH78AR8qSw0Tmypyd0Y5d0/Advaith-Tide-Task-Manager?node-id=65-531&t=ReGJLdIMgVzqOihW-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=65%3A531" target="_blank" rel="noopener" class="card-link">View prototype &#8599;</a>
+          </article>
+
+          <!-- Project 2: Folio (this site) -->
+          <article class="card reveal">
+            <span class="card-tag">Web Development</span>
+            <h3 class="card-title">Folio</h3>
+            <p class="card-desc">This portfolio site. Hand-written semantic HTML, a CSS design system carried straight from my Figma tokens, and a dark-mode toggle in vanilla JavaScript. Deployed on Netlify.</p>
+            <div class="card-meta">
+              <span class="chip">HTML</span>
+              <span class="chip">CSS</span>
+              <span class="chip">JavaScript</span>
+            </div>
+            <a href="https://github.com/advaithvanand722-gif/folio/tree/main" target="_blank" rel="noopener" class="card-link">View code &#8599;</a>
+          </article>
+
+          <!-- Project 3: Smart Junction INTELLI-SIGNAL -->
+          <article class="card reveal">
+            <span class="card-tag">EDGE AI</span>
+            <h3 class="card-title">Smart Junction: INTELLI-SIGNAL</h3>
+            <p class="card-desc">A comprehensive Edge AI solution designed for smart city infrastructure and urban mobility. This system optimizes traffic coordination and intelligent signaling at scale.</p>
+            <div class="card-meta">
+              <span class="chip">Edge AI</span>
+              <span class="chip">Smart City</span>
+            </div>
+            <a href="https://www.linkedin.com/posts/advaith-v-anand-ab5348372_revolutionizing-urban-mobility-i-am-incredibly-activity-7425134593718222850-6E5A?utm_source=share&utm_medium=member_android&rcm=ACoAAFw-RCkB3YYCkUVCPyNPG692eDOHaTO1bYI" class="card-link">View post</a>
+          </article>
+
+          <!-- Project 4: placeholder for your Session 03 Python bot -->
+          <article class="card reveal">
+            <span class="card-tag">Automation</span>
+            <h3 class="card-title">Pulse</h3>
+            <p class="card-desc">Coming after Session 03: a Python bot that sends me a daily summary every morning, scheduled with GitHub Actions. My first taste of automation.</p>
+            <div class="card-meta">
+              <span class="chip">Python</span>
+              <span class="chip">GitHub Actions</span>
+            </div>
+            <a href="#contact" class="card-link">In progress &#8594;</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GALLERY ============ -->
+    <section class="section" id="gallery">
+      <div class="container">
+        <p class="section-label">01A &#8212; Gallery</p>
+        <h2 class="section-title">Project Gallery</h2>
+
+        <!-- Filter Bar -->
+        <div class="gallery-controls">
+          <div class="filter-bar">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="design">Design</button>
+            <button class="filter-btn" data-filter="web">Web</button>
+            <button class="filter-btn" data-filter="code">Code</button>
+          </div>
+          <p class="project-count"><span id="project-count">4</span> projects</p>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="gallery-grid" id="gallery-grid">
+
+          <!-- Card 1: Code -->
+          <article class="gallery-card" data-category="code">
+            <h3 class="gallery-card-title">Smart Junction Logic</h3>
+            <div class="gallery-card-tags">
+              <span class="gallery-tag">C</span>
+              <span class="gallery-tag">Algorithms</span>
+            </div>
+            <p class="gallery-card-excerpt">Core routing algorithms and recursion logic for traffic node processing.</p>
+            <a href="#" class="gallery-card-link">View project →</a>
+          </article>
+
+          <!-- Card 2: Web -->
+          <article class="gallery-card" data-category="web">
+            <h3 class="gallery-card-title">F1 Telemetry Dashboard</h3>
+            <div class="gallery-card-tags">
+              <span class="gallery-tag">Python</span>
+              <span class="gallery-tag">Data</span>
+            </div>
+            <p class="gallery-card-excerpt">Web interface for visualizing 2026 aerodynamic reset telemetry.</p>
+            <a href="#" class="gallery-card-link">View project →</a>
+          </article>
+
+          <!-- Card 3: Design -->
+          <article class="gallery-card" data-category="design">
+            <h3 class="gallery-card-title">INTELLI-SIGNAL UI</h3>
+            <div class="gallery-card-tags">
+              <span class="gallery-tag">Figma</span>
+              <span class="gallery-tag">Prototyping</span>
+            </div>
+            <p class="gallery-card-excerpt">Operator command center interface for Edge AI traffic monitoring.</p>
+            <a href="#" class="gallery-card-link">View project →</a>
+          </article>
+
+          <!-- Card 4: Code -->
+          <article class="gallery-card" data-category="code">
+            <h3 class="gallery-card-title">Local Transit Router</h3>
+            <div class="gallery-card-tags">
+              <span class="gallery-tag">Python</span>
+              <span class="gallery-tag">Data</span>
+            </div>
+            <p class="gallery-card-excerpt">Automated script for scraping and routing localized road bus schedule data.</p>
+            <a href="#" class="gallery-card-link">View project →</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WRITING ============ -->
+    <section class="section" id="writing">
+      <div class="container">
+        <p class="section-label">02 &#8212; Writing</p>
+        <h2 class="section-title">Articles</h2>
+
+        <div class="writing-grid">
+
+          <!-- Article 1 -->
+          <article class="writing-card reveal">
+            <h3 class="writing-card-title">Architecting IoT Pipelines for Edge Devices</h3>
+            <p class="writing-card-date">June 2, 2026</p>
+            <p class="writing-card-excerpt">An overview of integrating Big Data frameworks with local sensor nodes to process telemetry efficiently before pushing it to the cloud.</p>
+            <a href="#" class="writing-card-link">Read article -&gt;</a>
+          </article>
+
+          <!-- Article 2 -->
+          <article class="writing-card reveal">
+            <h3 class="writing-card-title">Analyzing the 2026 F1 Technical Reset</h3>
+            <p class="writing-card-date">May 15, 2026</p>
+            <p class="writing-card-excerpt">A deep dive into the new active aerodynamics and how telemetry data pipelines will handle the updated power unit regulations.</p>
+            <a href="#" class="writing-card-link">Read article -&gt;</a>
+          </article>
+
+          <!-- Article 3 -->
+          <article class="writing-card reveal">
+            <h3 class="writing-card-title">Optimizing Matrix Operations in C</h3>
+            <p class="writing-card-date">April 28, 2026</p>
+            <p class="writing-card-excerpt">Breaking down algorithmic efficiency and memory management when handling complex matrix logic and recursive functions.</p>
+            <a href="#" class="writing-card-link">Read article -&gt;</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="section section-alt" id="skills">
+      <div class="container">
+        <p class="section-label">03 &#8212; Toolkit</p>
+        <h2 class="section-title">Skills</h2>
+
+        <div class="skills-list">
+
+          <div class="skill reveal">
+            <div class="skill-head">
+              <span class="skill-name">Figma &amp; UI Design</span>
+              <span class="skill-pct">85%</span>
+            </div>
+            <div class="skill-track">
+              <div class="skill-fill" style="--w: 85%; background: var(--primary);"></div>
+            </div>
+          </div>
+
+          <div class="skill reveal">
+            <div class="skill-head">
+              <span class="skill-name">HTML &amp; CSS</span>
+              <span class="skill-pct">75%</span>
+            </div>
+            <div class="skill-track">
+              <div class="skill-fill" style="--w: 75%; background: var(--pri-low);"></div>
+            </div>
+          </div>
+
+          <div class="skill reveal">
+            <div class="skill-head">
+              <span class="skill-name">JavaScript</span>
+              <span class="skill-pct">55%</span>
+            </div>
+            <div class="skill-track">
+              <div class="skill-fill" style="--w: 55%; background: var(--pri-med);"></div>
+            </div>
+          </div>
+
+          <div class="skill reveal">
+            <div class="skill-head">
+              <span class="skill-name">Python (learning)</span>
+              <span class="skill-pct">35%</span>
+            </div>
+            <div class="skill-track">
+              <div class="skill-fill" style="--w: 35%; background: var(--pri-high);"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section" id="contact">
+      <div class="container">
+        <p class="section-label">04 &#8212; Say Hello</p>
+        <h2 class="section-title">Contact</h2>
+        <p class="contact-lead">Open to internships, freelance design, and good conversations. The fastest way to reach me is email.</p>
+
+        <div class="contact-links">
+          <a href="mailto:you@example.com" class="contact-link">
+            <span class="contact-link-label">Email</span>
+            <span class="contact-link-value">advaithvanand@gmail.com</span>
+          </a>
+          <a href="https://github.com" target="_blank" rel="noopener" class="contact-link">
+            <span class="contact-link-label">GitHub</span>
+            <span class="contact-link-value">https://github.com/advaithvanand722-gif &#8599;</span>
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener" class="contact-link">
+            <span class="contact-link-label">LinkedIn</span>
+            <span class="contact-link-value">https://www.linkedin.com/in/advaith-v-anand-ab5348372?utm_source=share_via&utm_content=profile&utm_medium=member_android &#8599;</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <p>Built from scratch with HTML, CSS &amp; JavaScript &#8212; ZERO2DEV 2026.</p>
+      <p class="footer-muted">&#169; 2026 Advaith V. Anand. Designed in Figma, coded by hand.</p>
+    </div>
+  </footer>
+
+  <!-- Back-to-top button (hidden until you scroll) -->
+  <button class="to-top" id="to-top" aria-label="Back to top">&#8593;</button>
+
+  <!-- Your JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
