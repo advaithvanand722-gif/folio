@@ -1,0 +1,40 @@
+name: Auto-Update Projects JSON
+
+on:
+  # Runs twice a day automatically
+  schedule:
+    - cron: '0 */12 * * *'
+  # Allows you to trigger it manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  update-portfolio:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Crucial: Allows the bot to save the JSON file
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Run Fetcher Script
+        run: python update_projects.py
+
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          
+          # Check if the JSON file actually changed before trying to commit
+          if git diff --exit-code projects.json; then
+            echo "No changes detected. Skipping commit."
+          else
+            git add projects.json
+            git commit -m "chore: auto-update projects list [skip ci]"
+            git push
+          fi
